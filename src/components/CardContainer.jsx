@@ -1,17 +1,26 @@
-import React from 'react'
+import React from "react";
 
-import {data} from "../helper/data"
+import { data } from "../helper/data";
+import { Col, Container, Row } from "react-bootstrap";
+import Player from "./Player";
 
 const CardContainer = () => {
-
     // console.log(data)
-  return (
-    <>
-    {/* INPUT acilacak */}
-    
-    
-    </>
-  )
-}
+    return (
+        <>
+            {/* INPUT acilacak */}
 
-export default CardContainer
+            <Container>
+                <Row>
+                    {data.map((player) => (
+                        <Col key={player.name}>
+                            <Player />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        </>
+    );
+};
+
+export default CardContainer;
