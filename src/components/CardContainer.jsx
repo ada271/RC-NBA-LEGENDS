@@ -10,7 +10,7 @@ const CardContainer = () => {
         <>
             {/* INPUT acilacak */}
 
-            <Container>
+            <Container className="card-container">
                 <Row>
                     {data.map((player) => (
                         <Col key={player.name}>
