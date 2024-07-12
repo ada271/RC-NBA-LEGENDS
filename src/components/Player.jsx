@@ -13,9 +13,12 @@ const Player = ({ name, img, statistics }) => {
             {showResim ? (
                 <Card.Img className="player-resim" variant="top" src={img} />
             ) : (
-                <ul>
-                    <li>{statistics[0]}</li>
-                    <li>{statistics[1]}</li>
+                <ul className="m-auto">
+                    {statistics.map((item, index) => (
+                        <li className="h5 list-unstyled text-start" key={index}>
+                            🏀{item}
+                        </li>
+                    ))}
                 </ul>
             )}
 

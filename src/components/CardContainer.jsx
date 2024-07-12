@@ -10,10 +10,10 @@ const CardContainer = () => {
         <>
             {/* INPUT acilacak */}
 
-            <Container className="card-container">
-                <Row>
+            <Container className="card-container my-4 p-3 rounded-4">
+                <Row className="g-3">
                     {data.map((player) => (
-                        <Col key={player.name}>
+                        <Col md={6} lg={4} xl={3} key={player.name}>
                             <Player {...player}/>
                         </Col>
                     ))}
