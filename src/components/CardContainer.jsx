@@ -9,9 +9,9 @@ const CardContainer = () => {
 
     const [arama, setArama] = useState("");
 
-    let filtrelenmisData = "";
-    filtrelenmisData = data.filter((a) => a.name.includes(arama));
-    console.log(filtrelenmisData)
+    // let filtrelenmisData = "";
+    // filtrelenmisData = data.filter((a) => a.name.includes(arama));
+    // console.log(filtrelenmisData)
     return (
         <>
             {/* INPUT acilacak */}
@@ -25,7 +25,8 @@ const CardContainer = () => {
 
             <Container className="card-container my-4 p-3 rounded-4">
                 <Row className="g-3">
-                    {filtrelenmisData.map((player) => (
+                    {/* {filtrelenmisData.map((player) => ( */}
+                    {data.filter((abc)=>abc.name.toLowerCase().includes(arama.toLocaleLowerCase())).map((player) => (
                         <Col md={6} lg={4} xl={3} key={player.name}>
                             <Player {...player} />
                         </Col>
